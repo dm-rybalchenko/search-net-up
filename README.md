@@ -1,21 +1,53 @@
-# Web Player
+# Search page for Net-Up company
 
-Веб-приложение будет использоваться конечными пользователями для просмотра фильмов и сериалов с использованием веб-браузера. Предлагаем реализовать концепт **страницы поиска**. Эта страница показывает пользователю список рекомендованных фильмов и сериалов, а также позволяет искать медиа-контент по названию.
+* When you enter the search page, recommended movies are downloaded from a fake server.
 
-## Файлы
+* Images change on the main background with crossfade (which are also received from the server)
 
-C макетом страницы, подготовленным дизайнером, можно ознакомиться в [Figma](https://www.figma.com/file/Y0Sco27UBnYBNKRgE1sAiv/NetUP-Frontend-Task?node-id=0%3A1&t=nE9KbWGUIEKuF1IY-1) или в [`mock/search_page.png`](mock/search_page.png). В `/api/` находятся файлы, которые имитируют ответы бэкенда.
+* When you enter a query in the search input, a request is sent to the server and a response is returned with matching movies categorized.
 
-## API
+* There are also filters by category.
 
-Единственный метод, который доступен - `GET api/discover`. В ответе перечислены фоновые изображения, которые необходимо ротировать с интервалом 5 секунд - `backgrounds`. Также в ответе перечислены рекомендуемые сериалы (`items`).
+* Smooth animations on all elements.
 
-## Минимальный функционал
+* Created with React.js, Typescript, SCSS, Swiper for React. Bundled with Vite.
 
-- все пункты в верхнем меню ведут на страницу поиска
-- фоновые картинки ротируются с интервалом в 5 секунд с кроссфейдом
-- в списке рекомендуемых сериалов постер должен заменяться ключевым кадром (`keyframe`) при наведении курсора мыши
-- строка поиска сужает список рекомендуемых сериалов, поиск осуществляется по названию без учёта регистра
-- для имитации работы с реальным бэкендом, после нажатия кнопки "Search" нужно добавить задержку в 0-1000 мс, прежде чем обновлять список рекомендаций
+[Link to deployed application](https://endearing-shortbread-cca4ad.netlify.app/)
 
-В рамках тестового задания достаточно реализовать версию для desktop и не заморачиваться с адаптивным лейаутом. Но если получится сделать, чтобы приложение выглядело хорошо также и с мобильных устройств, это будет плюсом.
+## Screenshots
+![Screenshot-app](/public/Screenshot-app.jpg)
+
+![Screenshot-app](/public/Screenshot-app-search.jpg)
+
+*PC and mobile versions have been implemented.*
+
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:5173](http://localhost:5173/) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm format`
+
+Launches the prettier formatter for all files.
+
+### `npm format:check`
+
+Cheks format all files with prettier formatter.
+
+### `npm run build`
+
+Builds the app for production to the `dist` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
